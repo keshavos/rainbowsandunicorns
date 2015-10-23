@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.keshavos.rainbowsandunicorns" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Rainbows & Unicorns</name>
+    <name>Rainbows and Unicorns</name>
     <description>
         Test app which will reflect the app generated with the generator-angularjs-cordova generator.
         This could also be used as  a playground first where features added here will eventually make it to the generator.
