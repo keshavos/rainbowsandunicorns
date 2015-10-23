@@ -1,0 +1,44 @@
+{
+    "serve": [
+        "clean:server",
+        "injector",
+        "concurrent:server",
+        "autoprefixer",
+        "connect:livereload",
+        "watch"
+    ],
+    "test": [
+        "clean: server",
+        "concurrent: test",
+        "autoprefixer",
+        "connect: test",
+        "karma"
+    ],
+    "docs": [
+        "clean: docs",
+        "ngdocs",
+        "connect: docs: keepalive",
+        "watch"
+    ],
+    "build": [
+        "clean:dist",
+        "injector",
+        "ngdocs",
+        "useminPrepare",
+        "concurrent:dist",
+        "autoprefixer",
+        "concat",
+        "ngmin",
+        "copy:dist",
+        "cssmin",
+        "rev",
+        "usemin",
+        "htmlmin",
+        "comments:dist"
+    ],
+    "default": [
+        "newer:jshint",
+        "test",
+        "build"
+    ]
+}
