@@ -27,13 +27,13 @@
     },
     "installed_plugins": {
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.keshavos.xapp"
+            "PACKAGE_NAME": "com.keshavos.rainbowsandunicorns"
         },
         "org.apache.cordova.dialogs": {
-            "PACKAGE_NAME": "com.keshavos.xapp"
+            "PACKAGE_NAME": "com.keshavos.rainbowsandunicorns"
         },
         "org.apache.cordova.splashscreen": {
-            "PACKAGE_NAME": "com.keshavos.xapp"
+            "PACKAGE_NAME": "com.keshavos.rainbowsandunicorns"
         }
     },
     "dependent_plugins": {}
