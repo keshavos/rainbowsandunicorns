@@ -6,7 +6,7 @@ module.exports =  {
         flow: {
             html: {
                 steps: {
-                    js: ['concat'],
+                    js: ['concat', 'uglifyjs'],
                     css: ['cssmin']
                 },
                 post: {}

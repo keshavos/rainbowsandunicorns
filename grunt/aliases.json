@@ -8,16 +8,16 @@
         "watch"
     ],
     "test": [
-        "clean: server",
-        "concurrent: test",
+        "clean:server",
+        "concurrent:test",
         "autoprefixer",
-        "connect: test",
+        "connect:test",
         "karma"
     ],
     "docs": [
-        "clean: docs",
+        "clean:docs",
         "ngdocs",
-        "connect: docs: keepalive",
+        "connect:docs:keepalive",
         "watch"
     ],
     "build": [
@@ -25,6 +25,8 @@
         "injector",
         "ngdocs",
         "useminPrepare",
+        "concat:generated",
+        "uglify:generated",
         "concurrent:dist",
         "autoprefixer",
         "concat",
