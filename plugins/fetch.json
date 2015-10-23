@@ -1,0 +1,20 @@
+{
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "local",
+            "path": "/Users/keshavos/.plugman/cache/org.apache.cordova.device/0.3.0/package"
+        }
+    },
+    "org.apache.cordova.dialogs": {
+        "source": {
+            "type": "local",
+            "path": "/Users/keshavos/.plugman/cache/org.apache.cordova.dialogs/0.3.0/package"
+        }
+    },
+    "org.apache.cordova.splashscreen": {
+        "source": {
+            "type": "local",
+            "path": "/Users/keshavos/.plugman/cache/org.apache.cordova.splashscreen/1.0.0/package"
+        }
+    }
+}
