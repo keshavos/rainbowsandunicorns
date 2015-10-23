@@ -1,4 +1,4 @@
-module.exports =  {
+module.exports = {
 
     options: {
         browsers: ['last 1 version']
@@ -6,9 +6,9 @@ module.exports =  {
     dist: {
         files: [{
             expand: true,
-            cwd: '.tmp/styles/',
-            src: '**/*.css',
-            dest: '.tmp/styles/'
+            cwd: '<%= config.dist %>/assets/css/',
+            src: '{,*/}*.css',
+            dest: '<%= config.dist %>/assets/css/'
         }]
     }
 

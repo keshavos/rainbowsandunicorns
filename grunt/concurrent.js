@@ -1,13 +1,13 @@
 module.exports =  {
 
     server: [
-        'copy:styles'
+        'copy'
     ],
     test: [
-        'copy:styles'
+        'cop'
     ],
     dist: [
-        'copy:styles',
+        'copy',
         'imagemin',
         'svgmin'
     ]

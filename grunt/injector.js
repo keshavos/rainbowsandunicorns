@@ -1,31 +1,48 @@
-module.exports =  {
+module.exports = {
 
     options: {
         addRootSlash: false,
         ignorePath: 'app/',
         bowerPrefix: 'bower',
     },
-    localDependencies: {
+    css_dependencies: {
+        options: {
+            ignorePath: '<%= config.app %>'
+        },
         files: {
-            'app/index.html': [
-                'app/js/config.js',
-                'app/js/application.js',
-                'app/modules/*/*.js',
-                'app/modules/*/config/*.js',
-                'app/modules/*/services/*.js',
-                'app/modules/*/directives/*.js',
-                'app/modules/*/filters/*.js',
-                'app/modules/*/controllers/*.js',
-                'app/css/**/*.css'
+            '<%= config.app %>/index.html': [
+                '<%= config.app %>/assets/css/*.css'
+            ]
+        }
+    },
+    jsDir: {
+        files: {
+            '<%= config.app %>/index.html': [
+                '<%= config.app %>/js/config.js',
+                '<%= config.app %>/js/**/*.js'
             ]
         }
     },
     bowerDependencies: {
         files: {
-            'app/index.html': ['bower.json'],
+            '<%= config.app %>/index.html': ['bower.json'],
         }
     },
-    karmaDependencies: {
+    karma_bower_dependencies: {
+        options: {
+            transform: function(filepath) {
+                filepath = 'app/' + filepath;
+                return '\'' + filepath + '\',';
+            },
+            bowerPrefix: 'bower-'
+        },
+        files: {
+            'karma.conf.js': [
+                'bower.json'
+            ]
+        }
+    },
+    karma_dependencies: {
         options: {
             ignorePath: '',
             transform: function(filepath) {
@@ -33,7 +50,14 @@ module.exports =  {
             }
         },
         files: {
-            'karma.conf.js': ['bower.json'],
+            'karma.conf.js': [
+                '<%= config.app %>/js/config.js',
+                '<%= config.app %>/js/**/*.js',
+                '<%= config.app %>/modules/*/*.module.js',
+                '<%= config.app %>/modules/**/*.js',
+                '<%= config.app %>/modules/*/tests/unit/**/*.spec.js',
+                '!<%= config.app %>/modules/*/tests/e2e/**/*.js'
+            ]
         }
     }
 

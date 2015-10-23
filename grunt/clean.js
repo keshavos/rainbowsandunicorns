@@ -17,7 +17,6 @@ module.exports =  {
                 'docs/'
             ]
         }]
-    },
-    server: '.tmp'
+    }
 
 };

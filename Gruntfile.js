@@ -8,7 +8,8 @@ module.exports = function(grunt) {
         jitGrunt: {
             staticMappings: {
                 useminPrepare: 'grunt-usemin',
-                comments: 'grunt-stripcomments'
+                comments: 'grunt-stripcomments',
+                ngtemplates: 'grunt-angular-templates'
             }
         }
     });

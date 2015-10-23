@@ -1,7 +1,7 @@
 module.exports = {
 
     app: 'app',
-    temp: 'temp',
+    temp: '.tmp',
     dist: 'www'
 
 };

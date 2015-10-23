@@ -13,7 +13,7 @@ module.exports = function(config) {
 
         // List of files / patterns to load in the browser
         files: [
-            <!-- injector:bowerjs -->
+            <!-- injector:bower-js -->
             'app/lib/jquery/dist/jquery.js',
             'app/lib/bootstrap/dist/js/bootstrap.js',
             'app/lib/angular/angular.js',
@@ -28,23 +28,33 @@ module.exports = function(config) {
             'app/lib/angular-ui-router/release/angular-ui-router.js',
             <!-- endinjector -->
 
+            <!-- injector:js -->
             'app/js/config.js',
             'app/js/application.js',
-
-            'app/modules/*/*.js',
-            'app/modules/*/config/*.js',
-            'app/modules/*/services/*.js',
-            'app/modules/*/controllers/*.js',
-            'app/modules/*/directives/*.js',
-            'app/modules/*/filters/*.js',
-
-            'app/modules/*/tests/unit/**/*.js'
+            'app/modules/core/core.module.js',
+            'app/modules/core/config/routes.js',
+            'app/modules/core/controllers/home.js',
+            'app/modules/core/tests/unit/home.spec.js',
+            <!-- endinjector -->
         ],
 
         // Test results reporter to use
         // Possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
         //reporters: ['progress'],
-        reporters: ['progress'],
+        reporters: ['progress', 'coverage'],
+
+        coverageReporter: {
+            dir: 'coverage',
+            subdir: 'unit_tests'
+        },
+
+        preprocessors: {
+            'app/modules/*/config/*.js': 'coverage',
+            'app/modules/*/controllers/*.js': 'coverage',
+            'app/modules/*/directives/*.js': 'coverage',
+            'app/modules/*/filters/*.js': 'coverage',
+            'app/modules/*/services/*.js': 'coverage'
+        },
 
         // Web server port
         port: 9876,

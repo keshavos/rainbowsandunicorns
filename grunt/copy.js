@@ -1,31 +1,17 @@
-module.exports =  {
+module.exports = {
 
-    dist: {
+    all: {
         files: [{
             expand: true,
             dot: true,
             cwd: '<%= config.app %>',
-            dest: '<%= config.dist %>',
+            dest: '<%= config.dist %>/',
             src: [
-                '*.{ico,png,txt}',
-                '.htaccess',
-                'index.html',
-                'modules/*/views/*.html',
-                'img/{,*/}*.{webp}',
-                'fonts/*'
+                'assets/fonts/**/*',
+                'assets/images/**/*',
+                '*.html'
             ]
-        }, {
-            expand: true,
-            cwd: '.tmp/images',
-            dest: '<%= config.dist %>/img',
-            src: ['generated/*']
         }]
-    },
-    styles: {
-        expand: true,
-        cwd: '<%= config.app %>/css',
-        dest: '.tmp/css/',
-        src: '**/*.css'
     }
 
 };

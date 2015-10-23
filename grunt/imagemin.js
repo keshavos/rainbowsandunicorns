@@ -3,9 +3,9 @@ module.exports =  {
     dist: {
         files: [{
             expand: true,
-            cwd: '<%= config.app %>/img',
+            cwd: '<%= config.app %>/assets/images/**/*',
             src: '{,*/}*.{png,jpg,jpeg,gif}',
-            dest: '<%= config.dist %>/img'
+            dest: '<%= config.dist %>/assets/images/**/*'
         }]
     }
 

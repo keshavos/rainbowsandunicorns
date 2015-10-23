@@ -1,6 +1,6 @@
 {
     "serve": [
-        "clean:server",
+        "clean",
         "injector",
         "concurrent:server",
         "autoprefixer",
@@ -8,7 +8,7 @@
         "watch"
     ],
     "test": [
-        "clean:server",
+        "clean",
         "concurrent:test",
         "autoprefixer",
         "connect:test",
@@ -21,22 +21,22 @@
         "watch"
     ],
     "build": [
-        "clean:dist",
+        "clean",
         "injector",
-        "ngdocs",
+        "angularFileLoader:angularModules",
         "useminPrepare",
+        "ngtemplates:app",
         "concat:generated",
-        "uglify:generated",
+        "concat:templates",
+        "copy",
         "concurrent:dist",
         "autoprefixer",
-        "concat",
-        "ngmin",
-        "copy:dist",
-        "cssmin",
-        "rev",
+        "cssmin:generated",
+        "uglify:generated",
+        "imagemin",
+        "filerev:app",
         "usemin",
-        "htmlmin",
-        "comments:dist"
+        "htmlmin"
     ],
     "default": [
         "newer:jshint",
