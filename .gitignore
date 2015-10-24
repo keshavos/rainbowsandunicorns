@@ -9,13 +9,8 @@ node_modules/
 /docs/
 
 ##########Platforms##########
-platforms/android/
-platforms/ios/
 
 ##########Plugins##########
-plugins/org.apache.cordova.device
-plugins/org.apache.cordova.dialogs
-plugins/org.apache.cordova.splashscreen
 
 ##########iOS##########
 platforms/ios/cordova/console.log
